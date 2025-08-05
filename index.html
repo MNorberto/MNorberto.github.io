@@ -3,18 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Minimal Blog</title>
+  <title>Modern Blog</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="header">
     <div class="container">
-      <h1 class="logo">Minimal Blog</h1>
+      <div class="header-left">
+        <div class="logo">
+          <a href="/" class="logo-link">ModernBlog</a>
+        </div>
+        
+        <nav class="header-nav">
+          <a href="/" class="nav-item active">Home</a>
+          <a href="/about" class="nav-item">About</a>
+          <a href="/tags" class="nav-item">Tags</a>
+        </nav>
+      </div>
+      
       <div class="header-controls">
         <div class="search-container">
-          <input type="text" id="searchInput" placeholder="Search posts..." class="search-input">
+          <input 
+            type="text" 
+            class="search-input" 
+            placeholder="Search posts..." 
+            aria-label="Search posts"
+          />
         </div>
-        <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">
+        
+        <button class="theme-toggle" aria-label="Toggle theme">
           <div class="toggle-slider">
             <span class="toggle-icon">🌙</span>
           </div>
@@ -25,19 +42,15 @@
 
   <main class="main">
     <div class="container">
-      <div id="postsContainer" class="posts-grid">
-        <!-- Posts will be dynamically loaded here -->
-      </div>
-      
-      <div id="noResults" class="no-results" style="display: none;">
-        <p>No posts found matching your search.</p>
+      <div class="page">
+        <!-- Content will be dynamically loaded here -->
       </div>
     </div>
   </main>
 
   <footer class="footer">
     <div class="container">
-      <p>&copy; 2024 Minimal Blog. Simple and clean.</p>
+      <p>&copy; 2024 ModernBlog. Built with passion for sharing knowledge.</p>
     </div>
   </footer>
 

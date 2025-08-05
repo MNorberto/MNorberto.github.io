@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "title": "The Art of Minimalism in Design",
+    "excerpt": "Exploring how less can be more in modern web design. Understanding the principles that make minimalist designs so effective and timeless.",
+    "content": "Minimalism in design is about removing unnecessary elements while maintaining functionality and visual appeal. It's a philosophy that embraces the idea that less is more, focusing on what truly matters while eliminating distractions.\n\nThe key principles of minimalist design include:\n\n1. **Simplicity**: Remove unnecessary elements and focus on essential functionality\n2. **White space**: Use negative space effectively to create breathing room\n3. **Typography**: Choose clean, readable fonts that enhance the message\n4. **Color palette**: Limit colors to create harmony and focus\n5. **Hierarchy**: Establish clear visual hierarchy through size, weight, and spacing\n\nMinimalist design isn't about being boring or empty - it's about being intentional with every design decision.",
+    "date": "2024-01-15",
+    "category": "Design",
+    "tags": ["ui-design", "frontend", "css", "user-experience"],
+    "author": "Jane Doe",
+    "image": "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&h=400&fit=crop&q=80"
+  },
+  {
+    "id": 2,
+    "title": "Machine Learning in Web Development",
+    "excerpt": "How AI and ML are transforming frontend experiences. From personalization to intelligent user interfaces.",
+    "content": "Machine learning is revolutionizing web development by enabling intelligent, adaptive user experiences. Modern web applications can now learn from user behavior and provide personalized content.\n\nKey applications include:\n\n1. **Personalization**: Dynamic content based on user preferences\n2. **Predictive Analytics**: Anticipating user needs and actions\n3. **Natural Language Processing**: Chatbots and voice interfaces\n4. **Computer Vision**: Image recognition and processing\n5. **Recommendation Systems**: Intelligent content suggestions\n\nWith libraries like TensorFlow.js and brain.js, implementing ML in the browser has never been easier.",
+    "date": "2024-01-10",
+    "category": "AI/ML",
+    "tags": ["machine-learning", "artificial-intelligence", "tensorflow", "javascript"],
+    "author": "Emily Chen",
+    "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=400&fit=crop&q=80"
+  },
+  {
+    "id": 3,
+    "title": "WebAssembly: The Future of Web Performance",
+    "excerpt": "Understanding WebAssembly and how it's enabling near-native performance in web applications. A game-changer for complex web apps.",
+    "content": "WebAssembly (WASM) is a binary instruction format that enables near-native performance in web browsers. It's opening new possibilities for web applications that were previously impossible.\n\nKey benefits of WebAssembly:\n\n- **Performance**: Near-native execution speed\n- **Language Flexibility**: Write in C, C++, Rust, and more\n- **Security**: Runs in a sandboxed environment\n- **Portability**: Works across all modern browsers\n- **Integration**: Seamlessly works with JavaScript\n\nUse cases include gaming engines, image/video processing, cryptography, and scientific computing applications in the browser.",
+    "date": "2024-01-08",
+    "category": "Technology",
+    "tags": ["webassembly", "performance", "rust", "low-level"],
+    "author": "Mike Johnson",
+    "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=400&fit=crop&q=80"
+  },
+  {
+    "id": 4,
+    "title": "Building Responsive Web Applications",
+    "excerpt": "Modern techniques for creating adaptive layouts that work seamlessly across all devices and screen sizes.",
+    "content": "Responsive web design has evolved far beyond simple media queries. Today's web applications need to adapt intelligently to an ever-growing variety of devices and user contexts.\n\nModern responsive techniques include:\n\n1. **Container Queries**: Style elements based on their container size, not just viewport\n2. **Fluid Typography**: Using clamp() and viewport units for scalable text\n3. **CSS Grid**: Creating complex, flexible layouts with minimal code\n4. **Flexbox**: Perfect for component-level responsiveness\n5. **Progressive Enhancement**: Starting mobile-first and enhancing for larger screens\n\nThe key is thinking beyond device categories and focusing on content adaptation. Consider how your interface elements should behave at different sizes, and use modern CSS features to create truly fluid experiences.",
+    "date": "2024-01-05",
+    "category": "Frontend",
+    "tags": ["responsive-design", "css", "mobile-first", "web-development"],
+    "author": "Sarah Williams",
+    "image": "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=800&h=400&fit=crop&q=80"
+  },
+  {
+    "id": 5,
+    "title": "The Rise of Serverless Architecture",
+    "excerpt": "How serverless computing is changing the way we build and deploy web applications, from development to production.",
+    "content": "Serverless architecture represents a fundamental shift in how we think about backend development. By abstracting away server management, developers can focus purely on business logic and user value.\n\nKey benefits of serverless:\n\n- **Automatic Scaling**: Handle traffic spikes without manual intervention\n- **Cost Efficiency**: Pay only for actual execution time\n- **Reduced Complexity**: No server provisioning or maintenance\n- **Faster Time to Market**: Focus on features, not infrastructure\n- **Global Distribution**: Built-in edge computing capabilities\n\nPopular serverless platforms like AWS Lambda, Vercel Functions, and Cloudflare Workers are making it easier than ever to deploy scalable applications. The serverless ecosystem now includes databases, storage, and even entire frontend frameworks designed for this paradigm.\n\nWhile serverless isn't suitable for every use case, it's becoming the default choice for many modern web applications.",
+    "date": "2024-01-03",
+    "category": "Backend",
+    "tags": ["serverless", "cloud-computing", "aws", "scalability"],
+    "author": "David Chen",
+    "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=400&fit=crop&q=80"
+  },
+  {
+    "id": 6,
+    "title": "Modern JavaScript Frameworks Comparison",
+    "excerpt": "A comprehensive look at React, Vue, Svelte, and other popular frameworks. Which one should you choose for your next project?",
+    "content": "The JavaScript framework landscape has matured significantly, offering developers powerful tools for building modern web applications. Each framework brings unique strengths and philosophies.\n\n**React**: The ecosystem leader with unmatched community support and job market demand. Excellent for large applications and teams.\n\n**Vue.js**: Perfect balance of simplicity and power. Great developer experience with excellent documentation and gentle learning curve.\n\n**Svelte**: Compile-time optimization leads to smaller bundle sizes and better performance. Growing rapidly in popularity.\n\n**Angular**: Enterprise-grade framework with TypeScript-first approach. Ideal for large, complex applications with long-term maintenance needs.\n\n**Next.js/Nuxt.js**: Meta-frameworks that add SSR, routing, and deployment optimizations to React and Vue respectively.\n\nChoosing the right framework depends on your team's experience, project requirements, and long-term goals. Consider factors like bundle size, learning curve, ecosystem maturity, and performance requirements.",
+    "date": "2024-01-01",
+    "category": "Frontend",
+    "tags": ["javascript", "frameworks", "react", "vue", "svelte"],
+    "author": "Alex Rodriguez",
+    "image": "https://images.unsplash.com/photo-1627398242454-45a1465c2479?w=800&h=400&fit=crop&q=80"
+  }
+]
