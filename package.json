@@ -1,11 +1,29 @@
 {
-  "name": "minimal-blog",
+  "name": "modern-blog",
   "version": "1.0.0",
-  "description": "A clean, minimal blog with dark/light mode toggle",
+  "description": "A clean, minimalistic blog built with vanilla HTML, CSS, and JavaScript",
+  "main": "index.html",
   "scripts": {
-    "dev": "http-server -p 3000 -c-1 --cors -a localhost"
+    "dev": "http-server -p 3000 -c-1 --cors -a localhost",
+    "start": "http-server -p 3000 -c-1 --cors -a localhost",
+    "build": "echo 'No build step required for static site'"
+  },
+  "keywords": [
+    "blog",
+    "vanilla-js",
+    "responsive",
+    "dark-theme",
+    "minimal"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "homepage": "https://github.com/yourusername/modern-blog",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/modern-blog.git"
   },
   "dependencies": {
     "http-server": "^14.1.1"
-  }
+  },
+  "devDependencies": {}
 }
