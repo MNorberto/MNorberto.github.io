@@ -1,68 +1,175 @@
-[
-  {
-    "id": 1,
-    "title": "The Future of Web Development: Trends to Watch in 2024",
-    "excerpt": "Exploring the emerging technologies and methodologies that will shape web development in the coming year.",
-    "content": "The web development landscape continues to evolve at a rapid pace. As we look toward 2024, several key trends are emerging that will fundamentally change how we build and deploy web applications.\n\nArtificial Intelligence integration is becoming more prevalent, with AI-powered development tools helping developers write better code faster. From GitHub Copilot to advanced debugging assistants, AI is becoming an essential part of the developer toolkit.\n\nEdge computing is reshaping how we think about application architecture. By processing data closer to users, we can achieve unprecedented performance improvements and reduce latency significantly.\n\nWebAssembly continues to mature, opening up new possibilities for high-performance web applications. Languages like Rust and Go are becoming viable options for frontend development, breaking the JavaScript monopoly.\n\nThe serverless paradigm is expanding beyond simple functions to include entire application architectures. This shift is enabling developers to focus more on business logic and less on infrastructure management.",
-    "author": "Miguel Rivera",
-    "date": "2024-01-15",
-    "category": "Technology",
-    "tags": ["web-development", "ai", "trends", "serverless"],
-    "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=400&fit=crop&q=80"
-  },
-  {
-    "id": 2,
-    "title": "Mastering CSS Grid: A Complete Guide",
-    "excerpt": "Everything you need to know about CSS Grid Layout to create complex, responsive designs with ease.",
-    "content": "CSS Grid Layout has revolutionized how we approach web design. Unlike flexbox, which is designed for one-dimensional layouts, Grid excels at creating complex two-dimensional layouts with minimal code.\n\nThe power of Grid lies in its ability to define both rows and columns simultaneously. You can create sophisticated layouts that were previously only possible with complex combinations of floats, positioning, and flexbox.\n\nOne of Grid's greatest strengths is its responsive capabilities. With features like minmax(), auto-fit, and auto-fill, you can create layouts that adapt seamlessly to different screen sizes without media queries.\n\nGrid also introduces powerful alignment properties that work in both dimensions. You can center content, distribute space evenly, and align items with unprecedented control.\n\nBrowser support for Grid is excellent, with all modern browsers fully supporting the specification. It's time to embrace Grid as the primary tool for layout design.",
-    "author": "Miguel Rivera",
-    "date": "2024-01-10",
-    "category": "Design",
-    "tags": ["css", "grid", "layout", "responsive"],
-    "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=400&fit=crop&q=80"
-  },
-  {
-    "id": 3,
-    "title": "Building Scalable Node.js Applications",
-    "excerpt": "Best practices and architectural patterns for creating robust backend services that can handle growth.",
-    "content": "Building scalable Node.js applications requires careful consideration of architecture, performance, and maintainability from the start. The asynchronous nature of Node.js provides excellent performance characteristics, but it also introduces unique challenges.\n\nModular architecture is crucial for scalability. Breaking your application into smaller, focused modules makes it easier to maintain, test, and scale individual components. Consider using microservices architecture for larger applications.\n\nDatabase optimization plays a critical role in application performance. Implement proper indexing, use connection pooling, and consider caching strategies to reduce database load. Tools like Redis can significantly improve response times.\n\nError handling and logging are essential for production applications. Implement comprehensive error handling strategies and use structured logging to make debugging easier in production environments.\n\nMonitoring and observability should be built into your application from the beginning. Use tools like PM2 for process management and implement health checks to ensure your application runs reliably.",
-    "author": "Miguel Rivera",
-    "date": "2024-01-05",
-    "category": "Backend",
-    "tags": ["nodejs", "scalability", "architecture", "performance"],
-    "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=400&fit=crop&q=80"
-  },
-  {
-    "id": 4,
-    "title": "The Art of Code Review: Best Practices",
-    "excerpt": "How to conduct effective code reviews that improve code quality and foster team collaboration.",
-    "content": "Code reviews are one of the most valuable practices in software development, yet they're often done poorly or inconsistently. Effective code reviews improve code quality, share knowledge, and build better teams.\n\nThe primary goal of code review should be improving code quality, not finding fault with the author. Approach reviews with a collaborative mindset, focusing on the code rather than the person who wrote it.\n\nLook for more than just bugs. Consider code readability, maintainability, performance implications, and adherence to team standards. Ask questions when you don't understand something – it might indicate that the code needs better documentation or clearer naming.\n\nProvide constructive feedback with specific suggestions. Instead of saying 'this is wrong,' explain why and suggest alternatives. Include code examples when possible to make your feedback actionable.\n\nEstablish clear review guidelines and standards for your team. This includes response time expectations, review depth, and approval criteria. Consistency in the review process leads to better outcomes.",
-    "author": "Miguel Rivera",
-    "date": "2023-12-28",
-    "category": "Development",
-    "tags": ["code-review", "collaboration", "best-practices", "team"],
-    "image": "https://images.unsplash.com/photo-1556075798-4825dfaaf498?w=800&h=400&fit=crop&q=80"
-  },
-  {
-    "id": 5,
-    "title": "Introduction to Progressive Web Apps",
-    "excerpt": "Learn how to build web applications that provide native app-like experiences across all devices.",
-    "content": "Progressive Web Apps (PWAs) represent the future of web applications, combining the best of web and mobile app experiences. They're web applications that use modern web capabilities to provide app-like experiences to users.\n\nService Workers are the backbone of PWAs, enabling offline functionality, background sync, and push notifications. They act as a proxy between your app and the network, allowing you to cache resources and provide functionality even when offline.\n\nThe App Shell model is a key architectural pattern for PWAs. It separates the core application shell from the dynamic content, enabling instant loading and reliable performance regardless of network conditions.\n\nPWAs are installable directly from the browser, appearing on users' home screens like native apps. The Web App Manifest provides metadata about your application, including name, icons, and display preferences.\n\nPerformance is crucial for PWAs. Implement lazy loading, optimize images, minimize JavaScript bundles, and use efficient caching strategies to ensure fast loading times on all devices and network conditions.",
-    "author": "Miguel Rivera",
-    "date": "2023-12-20",
-    "category": "Frontend",
-    "tags": ["pwa", "service-worker", "offline", "performance"],
-    "image": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=400&fit=crop&q=80"
-  },
-  {
-    "id": 6,
-    "title": "Database Design Principles for Modern Applications",
-    "excerpt": "Essential principles and patterns for designing databases that support today's application requirements.",
-    "content": "Database design is a critical foundation for any application. Poor database design decisions made early in development can be expensive and difficult to fix later. Understanding core principles helps you build systems that scale and perform well.\n\nNormalization reduces data redundancy and maintains data integrity, but over-normalization can hurt performance. Strike a balance between normalized design and query performance based on your application's specific needs.\n\nIndex design is crucial for query performance. Create indexes for frequently queried columns, but remember that indexes have maintenance overhead. Monitor query performance and adjust indexes based on actual usage patterns.\n\nConsider data access patterns when designing your schema. How will your application read and write data? Design your schema to support the most common operations efficiently.\n\nPlan for scalability from the beginning. Consider partitioning strategies, read replicas, and caching layers. Design your schema to support horizontal scaling if your application might need it in the future.\n\nData modeling should reflect your business domain. Use meaningful names, enforce constraints at the database level, and document your design decisions for future maintainers.",
-    "author": "Miguel Rivera",
-    "date": "2023-12-15",
-    "category": "Database",
-    "tags": ["database", "design", "performance", "scalability"],
-    "image": "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=800&h=400&fit=crop&q=80"
-  }
-]
+{
+  "posts": [
+    {
+      "id": "modern-javascript-features",
+      "title": "Modern JavaScript Features You Should Know in 2024",
+      "slug": "modern-javascript-features",
+      "author": "Miguel",
+      "date": "2024-12-15",
+      "excerpt": "Explore the latest JavaScript features including optional chaining, nullish coalescing, and top-level await that make development more efficient and enjoyable.",
+      "tags": ["JavaScript", "ES2024", "Web Development"],
+      "content": [
+        {
+          "type": "section",
+          "title": "Optional Chaining (?.)",
+          "content": "Optional chaining allows you to safely access deeply nested object properties without having to validate each reference in the chain explicitly.",
+          "code": "// Before optional chaining\nif (user && user.address && user.address.street) {\n  console.log(user.address.street);\n}\n\n// With optional chaining\nconsole.log(user?.address?.street);"
+        },
+        {
+          "type": "section",
+          "title": "Nullish Coalescing (??)",
+          "content": "The nullish coalescing operator provides a way to fall back to a default value when dealing with null or undefined, but not other falsy values like 0 or empty strings.",
+          "code": "// Using || operator (problematic with falsy values)\nconst config = {\n  timeout: 0,\n  retries: null\n};\n\nconst timeout = config.timeout || 5000; // 5000 (wrong!)\nconst retries = config.retries ?? 3; // 3 (correct!)"
+        },
+        {
+          "type": "section",
+          "title": "Top-Level Await",
+          "content": "You can now use await at the top level of modules, making it easier to work with asynchronous code during module initialization.",
+          "code": "// In a module file\nconst data = await fetch('/api/config').then(r => r.json());\nconst connection = await connectToDatabase();\n\nexport { data, connection };"
+        },
+        {
+          "type": "section",
+          "title": "Array Methods: at(), findLast(), and findLastIndex()",
+          "content": "New array methods provide more intuitive ways to access and find elements.",
+          "code": "const arr = [1, 2, 3, 4, 5];\n\n// Negative indexing with at()\nconsole.log(arr.at(-1)); // 5\nconsole.log(arr.at(-2)); // 4\n\n// Finding from the end\nconst users = [\n  { id: 1, active: false },\n  { id: 2, active: true },\n  { id: 3, active: true }\n];\n\nconst lastActiveUser = users.findLast(user => user.active);\nconsole.log(lastActiveUser); // { id: 3, active: true }"
+        },
+        {
+          "type": "section",
+          "title": "Private Fields and Methods",
+          "content": "True privacy in JavaScript classes using the # prefix for private fields and methods.",
+          "code": "class BankAccount {\n  #balance = 0;\n  #accountNumber;\n\n  constructor(accountNumber) {\n    this.#accountNumber = accountNumber;\n  }\n\n  #validateAmount(amount) {\n    return amount > 0 && typeof amount === 'number';\n  }\n\n  deposit(amount) {\n    if (this.#validateAmount(amount)) {\n      this.#balance += amount;\n    }\n  }\n\n  getBalance() {\n    return this.#balance;\n  }\n}"
+        },
+        {
+          "type": "section",
+          "title": "Logical Assignment Operators",
+          "content": "Combine logical operators with assignment for more concise code.",
+          "code": "// Logical OR assignment (||=)\nuser.name ||= 'Anonymous';\n\n// Logical AND assignment (&&=)\nuser.isAdmin &&= user.permissions.includes('admin');\n\n// Logical nullish assignment (??=)\nconfig.timeout ??= 5000;"
+        },
+        {
+          "type": "conclusion",
+          "content": "These modern JavaScript features significantly improve code readability, safety, and developer experience. As browser support continues to improve, incorporating these features into your development workflow will make your code more robust and maintainable."
+        }
+      ]
+    },
+    {
+      "id": "react-performance-optimization",
+      "title": "React Performance Optimization with Custom Hooks",
+      "slug": "react-performance-optimization",
+      "author": "Miguel",
+      "date": "2024-12-10",
+      "excerpt": "Learn how to build custom React hooks that optimize performance through memoization, debouncing, and virtual scrolling techniques.",
+      "tags": ["React", "Performance", "Hooks"],
+      "content": [
+        {
+          "type": "section",
+          "title": "React Performance Bottlenecks",
+          "content": "Before diving into solutions, it's important to understand what causes performance issues in React applications. Common culprits include unnecessary re-renders, expensive computations, and inefficient state management."
+        },
+        {
+          "type": "section",
+          "title": "Creating a Debounced Hook",
+          "content": "Debouncing is essential for handling rapid user inputs like search queries or form validation.",
+          "code": "import { useState, useEffect } from 'react';\n\nfunction useDebounce(value, delay) {\n  const [debouncedValue, setDebouncedValue] = useState(value);\n\n  useEffect(() => {\n    const handler = setTimeout(() => {\n      setDebouncedValue(value);\n    }, delay);\n\n    return () => {\n      clearTimeout(handler);\n    };\n  }, [value, delay]);\n\n  return debouncedValue;\n}\n\n// Usage\nfunction SearchComponent() {\n  const [searchTerm, setSearchTerm] = useState('');\n  const debouncedSearchTerm = useDebounce(searchTerm, 300);\n\n  useEffect(() => {\n    if (debouncedSearchTerm) {\n      // Perform search API call\n      searchAPI(debouncedSearchTerm);\n    }\n  }, [debouncedSearchTerm]);\n\n  return (\n    <input\n      value={searchTerm}\n      onChange={(e) => setSearchTerm(e.target.value)}\n      placeholder=\"Search...\"\n    />\n  );\n}"
+        },
+        {
+          "type": "section",
+          "title": "Memoization Hook for Expensive Calculations",
+          "content": "For computationally expensive operations, we can create a custom hook that combines useMemo with additional logic.",
+          "code": "import { useMemo, useRef } from 'react';\n\nfunction useExpensiveCalculation(calculate, dependencies) {\n  const previousDeps = useRef();\n  const previousResult = useRef();\n\n  const result = useMemo(() => {\n    const hasChanged = !previousDeps.current || \n      dependencies.some((dep, index) => dep !== previousDeps.current[index]);\n\n    if (hasChanged) {\n      console.log('Performing expensive calculation...');\n      previousResult.current = calculate();\n      previousDeps.current = dependencies;\n    }\n\n    return previousResult.current;\n  }, dependencies);\n\n  return result;\n}\n\n// Usage\nfunction DataProcessor({ data, filters }) {\n  const processedData = useExpensiveCalculation(\n    () => data.filter(item => filters.every(filter => filter(item))),\n    [data, filters]\n  );\n\n  return <DataTable data={processedData} />;\n}"
+        },
+        {
+          "type": "section",
+          "title": "Virtual Scrolling Hook",
+          "content": "For large lists, virtual scrolling can dramatically improve performance by only rendering visible items.",
+          "code": "import { useState, useEffect, useMemo } from 'react';\n\nfunction useVirtualScroll({\n  items,\n  itemHeight,\n  containerHeight,\n  overscan = 5\n}) {\n  const [scrollTop, setScrollTop] = useState(0);\n\n  const visibleItems = useMemo(() => {\n    const startIndex = Math.max(0, Math.floor(scrollTop / itemHeight) - overscan);\n    const endIndex = Math.min(\n      items.length - 1,\n      Math.floor((scrollTop + containerHeight) / itemHeight) + overscan\n    );\n\n    return items.slice(startIndex, endIndex + 1).map((item, index) => ({\n      ...item,\n      index: startIndex + index\n    }));\n  }, [items, itemHeight, containerHeight, scrollTop, overscan]);\n\n  const totalHeight = items.length * itemHeight;\n\n  return {\n    visibleItems,\n    totalHeight,\n    scrollTop,\n    setScrollTop\n  };\n}"
+        },
+        {
+          "type": "conclusion",
+          "content": "Custom hooks for performance optimization provide reusable solutions that can significantly improve your React application's responsiveness. By implementing debouncing, memoization, and virtual scrolling through custom hooks, you create maintainable and efficient code that scales well across your application."
+        }
+      ]
+    },
+    {
+      "id": "css-container-queries",
+      "title": "CSS Container Queries: The Future of Responsive Design",
+      "slug": "css-container-queries",
+      "author": "Miguel",
+      "date": "2024-12-05",
+      "excerpt": "Discover how CSS Container Queries enable components to respond to their container size rather than viewport, creating truly modular responsive components.",
+      "tags": ["CSS", "Responsive Design", "Container Queries"],
+      "content": [
+        {
+          "type": "section",
+          "title": "Container Queries",
+          "content": "Traditional media queries respond to viewport dimensions, but Container Queries allow elements to respond to their immediate container's size. This creates more flexible, reusable components."
+        },
+        {
+          "type": "section",
+          "title": "Setting Up Container Contexts",
+          "content": "To use container queries, you first need to establish a containment context using the container-type property.",
+          "code": "/* Establish containment context */\n.card-container {\n  container-type: inline-size;\n  container-name: card;\n}\n\n/* Alternative shorthand */\n.card-container {\n  container: card / inline-size;\n}"
+        },
+        {
+          "type": "section",
+          "title": "Writing Container Queries",
+          "content": "Container queries use the @container rule to define responsive behavior based on the container's dimensions.",
+          "code": "/* Default card layout */\n.card {\n  display: flex;\n  flex-direction: column;\n  gap: 1rem;\n  padding: 1rem;\n  border: 1px solid #ddd;\n  border-radius: 8px;\n}\n\n.card-image {\n  width: 100%;\n  height: 200px;\n  object-fit: cover;\n}\n\n.card-content {\n  flex: 1;\n}\n\n/* When container is wider than 400px */\n@container card (min-width: 400px) {\n  .card {\n    flex-direction: row;\n    align-items: center;\n  }\n  \n  .card-image {\n    width: 150px;\n    height: 150px;\n    flex-shrink: 0;\n  }\n}\n\n/* When container is wider than 600px */\n@container card (min-width: 600px) {\n  .card {\n    padding: 2rem;\n  }\n  \n  .card-image {\n    width: 200px;\n    height: 200px;\n  }\n}"
+        },
+        {
+          "type": "section",
+          "title": "Responsive Navigation",
+          "content": "Here's how to create a navigation component that adapts to its container size.",
+          "code": "/* Navigation container */\n.nav-container {\n  container-type: inline-size;\n  container-name: navigation;\n}\n\n/* Default mobile-first navigation */\n.nav {\n  display: flex;\n  flex-direction: column;\n  gap: 0.5rem;\n}\n\n.nav-toggle {\n  display: block;\n  background: none;\n  border: 1px solid #333;\n  padding: 0.5rem;\n  cursor: pointer;\n}\n\n.nav-menu {\n  display: none;\n  flex-direction: column;\n  gap: 0.5rem;\n}\n\n.nav-menu.active {\n  display: flex;\n}\n\n/* When container is wide enough for horizontal layout */\n@container navigation (min-width: 500px) {\n  .nav {\n    flex-direction: row;\n    align-items: center;\n    justify-content: space-between;\n  }\n  \n  .nav-toggle {\n    display: none;\n  }\n  \n  .nav-menu {\n    display: flex !important;\n    flex-direction: row;\n    gap: 2rem;\n  }\n}"
+        },
+        {
+          "type": "section",
+          "title": "Container Query Units",
+          "content": "Container queries introduce new units that are relative to the container's dimensions.",
+          "code": "/* Container query length units */\n.responsive-text {\n  /* 1% of container's inline size (width in horizontal languages) */\n  font-size: 4cqi;\n  \n  /* 1% of container's block size (height in horizontal languages) */\n  line-height: 2cqb;\n  \n  /* 1% of the smaller of cqi and cqb */\n  padding: 2cqmin;\n  \n  /* 1% of the larger of cqi and cqb */\n  margin: 1cqmax;\n}"
+        },
+        {
+          "type": "section",
+          "title": "Best Practices and Browser Support",
+          "content": "Container queries are well-supported in modern browsers. Here are some best practices for implementation:",
+          "list": [
+            "Use progressive enhancement with fallbacks for older browsers",
+            "Combine container queries with traditional media queries when needed",
+            "Name your containers for better maintainability",
+            "Consider performance implications with deeply nested containers"
+          ]
+        },
+        {
+          "type": "conclusion",
+          "content": "CSS Container Queries revolutionize how we think about responsive design, enabling truly modular components that adapt to their context. As browser support continues to improve, container queries will become an essential tool for modern web development."
+        }
+      ]
+    },
+    {
+      "id": "typescript-node-api",
+      "title": "Building Type-Safe APIs with TypeScript and Node.js",
+      "slug": "typescript-node-api",
+      "author": "Miguel",
+      "date": "2024-11-28",
+      "excerpt": "A comprehensive guide to building robust, type-safe REST APIs using TypeScript, Express, and modern development practices.",
+      "tags": ["TypeScript", "Node.js", "API"]
+    },
+    {
+      "id": "webassembly-rust-performance",
+      "title": "WebAssembly and Rust: Supercharging Web Performance",
+      "slug": "webassembly-rust-performance",
+      "author": "Miguel",
+      "date": "2024-11-20",
+      "excerpt": "Learn how to integrate Rust-compiled WebAssembly modules into your web applications for near-native performance in the browser.",
+      "tags": ["WebAssembly", "Rust", "Performance"]
+    },
+    {
+      "id": "next-js-app-router",
+      "title": "Mastering Next.js 13 App Router: A Complete Guide",
+      "slug": "next-js-app-router",
+      "author": "Miguel",
+      "date": "2024-11-15",
+      "excerpt": "Deep dive into Next.js 13's new App Router, exploring server components, nested layouts, and the future of React applications.",
+      "tags": ["Next.js", "React", "SSR"]
+    }
+  ]
+}

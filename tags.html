@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tags - Tech Git Blog</title>
+  <meta name="description" content="Browse articles by technology tags">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <nav class="nav">
+        <div class="nav-brand">
+          <h1><a href="/" style="text-decoration: none; color: inherit;">Tech Git Blog</a></h1>
+        </div>
+        <div class="nav-search">
+          <div class="search-wrapper">
+            <input 
+              type="text" 
+              id="searchInput" 
+              class="search-input" 
+              placeholder="Search articles..."
+              aria-label="Search articles"
+            >
+            <button class="search-btn" aria-label="Search">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.35-4.35"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <span class="toggle-icon">🌙</span>
+        </button>
+        <ul class="nav-links">
+          <li><a href="/" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="tags.html" class="nav-link active">Tags</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="container">
+      <div class="content-wrapper">
+        <h1 class="page-title">Browse by Tags</h1>
+        <p class="page-description">Explore articles organized by technology and topic. Click on any tag to filter posts.</p>
+        
+        <div class="tags-section">
+          <h2>All Tags</h2>
+          <div class="tags-cloud" id="tagsCloud">
+            <button class="tag-filter active" data-tag="all">All Posts</button>
+            <button class="tag-filter" data-tag="ai">AI</button>
+            <button class="tag-filter" data-tag="machine-learning">Machine Learning</button>
+            <button class="tag-filter" data-tag="neural-networks">Neural Networks</button>
+            <button class="tag-filter" data-tag="blockchain">Blockchain</button>
+            <button class="tag-filter" data-tag="web3">Web3</button>
+            <button class="tag-filter" data-tag="decentralized">Decentralized</button>
+            <button class="tag-filter" data-tag="quantum-computing">Quantum Computing</button>
+            <button class="tag-filter" data-tag="cryptography">Cryptography</button>
+            <button class="tag-filter" data-tag="security">Security</button>
+            <button class="tag-filter" data-tag="edge-computing">Edge Computing</button>
+            <button class="tag-filter" data-tag="iot">IoT</button>
+            <button class="tag-filter" data-tag="cloud-native">Cloud Native</button>
+            <button class="tag-filter" data-tag="5g">5G</button>
+            <button class="tag-filter" data-tag="mobile-tech">Mobile Tech</button>
+            <button class="tag-filter" data-tag="augmented-reality">Augmented Reality</button>
+            <button class="tag-filter" data-tag="automation">Automation</button>
+            <button class="tag-filter" data-tag="robotics">Robotics</button>
+            <button class="tag-filter" data-tag="smart-cities">Smart Cities</button>
+          </div>
+        </div>
+
+        <section class="filtered-posts">
+          <h2 id="postsTitle">All Posts</h2>
+          <div class="posts-grid" id="filteredPosts">
+            <article class="post-card" data-tags="ai,machine-learning,neural-networks">
+              <div class="post-header">
+                <h3 class="post-title">
+                  <a href="posts/modern-javascript-features.html">Modern JavaScript Features You Should Know in 2024</a>
+                </h3>
+                <time class="post-date">December 15, 2024</time>
+              </div>
+              <p class="post-excerpt">
+                Explore the latest JavaScript features including optional chaining, nullish coalescing, and top-level await.
+              </p>
+              <div class="post-tags">
+                <a href="tags.html?tag=ai" class="tag">AI</a>
+                <a href="tags.html?tag=machine-learning" class="tag">Machine Learning</a>
+                <a href="tags.html?tag=neural-networks" class="tag">Neural Networks</a>
+              </div>
+            </article>
+
+            <article class="post-card" data-tags="blockchain,web3,decentralized">
+              <div class="post-header">
+                <h3 class="post-title">
+                  <a href="posts/react-performance-optimization.html">React Performance Optimization with Custom Hooks</a>
+                </h3>
+                <time class="post-date">December 10, 2024</time>
+              </div>
+              <p class="post-excerpt">
+                Learn how to build custom React hooks that optimize performance through memoization and debouncing.
+              </p>
+              <div class="post-tags">
+                <a href="tags.html?tag=blockchain" class="tag">Blockchain</a>
+                <a href="tags.html?tag=web3" class="tag">Web3</a>
+                <a href="tags.html?tag=decentralized" class="tag">Decentralized</a>
+              </div>
+            </article>
+
+            <article class="post-card" data-tags="quantum-computing,cryptography,security">
+              <div class="post-header">
+                <h3 class="post-title">
+                  <a href="posts/css-container-queries.html">CSS Container Queries: The Future of Responsive Design</a>
+                </h3>
+                <time class="post-date">December 5, 2024</time>
+              </div>
+              <p class="post-excerpt">
+                Discover how CSS Container Queries enable components to respond to their container size rather than viewport.
+              </p>
+              <div class="post-tags">
+                <a href="tags.html?tag=quantum-computing" class="tag">Quantum Computing</a>
+                <a href="tags.html?tag=cryptography" class="tag">Cryptography</a>
+                <a href="tags.html?tag=security" class="tag">Security</a>
+              </div>
+            </article>
+
+            <article class="post-card" data-tags="edge-computing,iot,cloud-native">
+              <div class="post-header">
+                <h3 class="post-title">
+                  <a href="posts/typescript-node-api.html">Building Type-Safe APIs with TypeScript and Node.js</a>
+                </h3>
+                <time class="post-date">November 28, 2024</time>
+              </div>
+              <p class="post-excerpt">
+                A comprehensive guide to building robust, type-safe REST APIs using TypeScript and Express.
+              </p>
+              <div class="post-tags">
+                <a href="tags.html?tag=edge-computing" class="tag">Edge Computing</a>
+                <a href="tags.html?tag=iot" class="tag">IoT</a>
+                <a href="tags.html?tag=cloud-native" class="tag">Cloud Native</a>
+              </div>
+            </article>
+
+            <article class="post-card" data-tags="5g,mobile-tech,augmented-reality">
+              <div class="post-header">
+                <h3 class="post-title">
+                  <a href="posts/advanced-git-workflows.html">Advanced Git Workflows for Team Development</a>
+                </h3>
+                <time class="post-date">November 20, 2024</time>
+              </div>
+              <p class="post-excerpt">
+                Master advanced Git techniques including interactive rebasing and conflict resolution strategies.
+              </p>
+              <div class="post-tags">
+                <a href="tags.html?tag=5g" class="tag">5G</a>
+                <a href="tags.html?tag=mobile-tech" class="tag">Mobile Tech</a>
+                <a href="tags.html?tag=augmented-reality" class="tag">Augmented Reality</a>
+              </div>
+            </article>
+
+            <article class="post-card" data-tags="automation,robotics,smart-cities">
+              <div class="post-header">
+                <h3 class="post-title">
+                  <a href="posts/webassembly-rust-performance.html">WebAssembly and Rust: Supercharging Web Performance</a>
+                </h3>
+                <time class="post-date">November 15, 2024</time>
+              </div>
+              <p class="post-excerpt">
+                Learn how to integrate Rust-compiled WebAssembly modules for near-native web performance.
+              </p>
+              <div class="post-tags">
+                <a href="tags.html?tag=automation" class="tag">Automation</a>
+                <a href="tags.html?tag=robotics" class="tag">Robotics</a>
+                <a href="tags.html?tag=smart-cities" class="tag">Smart Cities</a>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 Tech Git Blog. Built with ❤️ for developers.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -3,54 +3,148 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Modern Blog</title>
+  <title>Tech Git Blog - Latest Web Development Insights</title>
+  <meta name="description" content="Stay updated with the latest web development trends, tutorials, and best practices. Explore JavaScript, React, CSS, and more.">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="header">
     <div class="container">
-      <div class="header-left">
-        <div class="logo">
-          <a href="/" class="logo-link">ModernBlog</a>
+      <nav class="nav">
+        <div class="nav-brand">
+          <h1>Tech Git Blog</h1>
         </div>
-        
-        <nav class="header-nav">
-          <a href="/" class="nav-item active">Home</a>
-          <a href="/about" class="nav-item">About</a>
-          <a href="/tags" class="nav-item">Tags</a>
-        </nav>
-      </div>
-      
-      <div class="header-controls">
-        <div class="search-container">
-          <input 
-            type="text" 
-            class="search-input" 
-            placeholder="Search posts..." 
-            aria-label="Search posts"
-          />
-        </div>
-        
-        <button class="theme-toggle" aria-label="Toggle theme">
-          <div class="toggle-slider">
-            <span class="toggle-icon">🌙</span>
+        <div class="nav-search">
+          <div class="search-wrapper">
+            <input 
+              type="text" 
+              id="searchInput" 
+              class="search-input" 
+              placeholder="Search articles..."
+              aria-label="Search articles"
+            >
+            <button class="search-btn" aria-label="Search">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.35-4.35"></path>
+              </svg>
+            </button>
           </div>
+        </div>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <span class="toggle-icon">🌙</span>
         </button>
-      </div>
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="tags.html" class="nav-link">Tags</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
 
   <main class="main">
     <div class="container">
-      <div class="page">
-        <!-- Content will be dynamically loaded here -->
-      </div>
+      <section class="posts-section">
+        <h1 class="section-title">Latest Posts</h1>
+        <div class="posts-grid" id="postsGrid">
+          <a href="posts/modern-javascript-features.html" class="post-card">
+            <div class="post-header">
+              <h2 class="post-title">
+                <span>Modern JavaScript Features You Should Know in 2024</span>
+              </h2>
+              <time class="post-date">December 15, 2024</time>
+            </div>
+            <p class="post-excerpt">Explore the latest JavaScript features including optional chaining, nullish coalescing, and top-level await that make development more efficient and enjoyable.</p>
+            <div class="post-tags">
+              <span class="tag">JavaScript</span>
+              <span class="tag">ES2024</span>
+              <span class="tag">Web Development</span>
+            </div>
+          </a>
+
+          <a href="posts/react-performance-optimization.html" class="post-card">
+            <div class="post-header">
+              <h2 class="post-title">
+                <span>React Performance Optimization with Custom Hooks</span>
+              </h2>
+              <time class="post-date">December 10, 2024</time>
+            </div>
+            <p class="post-excerpt">Learn how to build custom React hooks that optimize performance through memoization, debouncing, and virtual scrolling techniques.</p>
+            <div class="post-tags">
+              <span class="tag">React</span>
+              <span class="tag">Performance</span>
+              <span class="tag">Hooks</span>
+            </div>
+          </a>
+
+          <a href="posts/css-container-queries.html" class="post-card">
+            <div class="post-header">
+              <h2 class="post-title">
+                <span>CSS Container Queries: The Future of Responsive Design</span>
+              </h2>
+              <time class="post-date">December 5, 2024</time>
+            </div>
+            <p class="post-excerpt">Discover how CSS Container Queries enable components to respond to their container size rather than viewport, creating truly modular responsive components.</p>
+            <div class="post-tags">
+              <span class="tag">CSS</span>
+              <span class="tag">Responsive Design</span>
+              <span class="tag">Container Queries</span>
+            </div>
+          </a>
+
+          <a href="posts/typescript-node-api.html" class="post-card">
+            <div class="post-header">
+              <h2 class="post-title">
+                <span>Building Type-Safe APIs with TypeScript and Node.js</span>
+              </h2>
+              <time class="post-date">November 28, 2024</time>
+            </div>
+            <p class="post-excerpt">A comprehensive guide to building robust, type-safe REST APIs using TypeScript, Express, and modern development practices.</p>
+            <div class="post-tags">
+              <span class="tag">TypeScript</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">API</span>
+            </div>
+          </a>
+
+          <a href="posts/webassembly-rust-performance.html" class="post-card">
+            <div class="post-header">
+              <h2 class="post-title">
+                <span>WebAssembly and Rust: Supercharging Web Performance</span>
+              </h2>
+              <time class="post-date">November 20, 2024</time>
+            </div>
+            <p class="post-excerpt">Learn how to integrate Rust-compiled WebAssembly modules into your web applications for near-native performance in the browser.</p>
+            <div class="post-tags">
+              <span class="tag">WebAssembly</span>
+              <span class="tag">Rust</span>
+              <span class="tag">Performance</span>
+            </div>
+          </a>
+
+          <a href="posts/next-js-app-router.html" class="post-card">
+            <div class="post-header">
+              <h2 class="post-title">
+                <span>Mastering Next.js 13 App Router: A Complete Guide</span>
+              </h2>
+              <time class="post-date">November 15, 2024</time>
+            </div>
+            <p class="post-excerpt">Deep dive into Next.js 13's new App Router, exploring server components, nested layouts, and the future of React applications.</p>
+            <div class="post-tags">
+              <span class="tag">Next.js</span>
+              <span class="tag">React</span>
+              <span class="tag">SSR</span>
+            </div>
+          </a>
+        </div>
+      </section>
     </div>
   </main>
 
   <footer class="footer">
     <div class="container">
-      <p>&copy; 2024 ModernBlog. Built with passion for sharing knowledge.</p>
+      <p>&copy; 2024 Tech Git Blog. Built with ❤️ for developers.</p>
     </div>
   </footer>
 
