@@ -7,12 +7,18 @@
     "dev": "http-server -p 3000 -c-1 --cors -a localhost",
     "build": "node generate-site.js",
     "add-post": "node add-post.js",
-    "start": "npm run build && npm run dev"
+    "start": "npm run build && npm run dev",
+    "deploy": "gh-pages -d .",
+    "predeploy": "npm run build"
   },
   "dependencies": {
     "http-server": "^14.1.1"
   },
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
+  },
   "keywords": ["blog", "static-site", "generator", "tech", "web-development"],
   "author": "Miguel",
-  "license": "MIT"
+  "license": "MIT",
+  "homepage": "https://yourusername.github.io/tech-git-blog"
 }

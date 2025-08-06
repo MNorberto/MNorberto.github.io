@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About - Tech Git Blog</title>
-  <meta name="description" content="Learn about Tech Git Blog - a platform for developers exploring emerging technologies">
+  <meta name="description" content="Learn about Tech Git Blog - your source for web development insights, tutorials, and best practices.">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -12,30 +12,16 @@
     <div class="container">
       <nav class="nav">
         <div class="nav-brand">
-          <h1><a href="/" style="text-decoration: none; color: inherit;">Tech Git Blog</a></h1>
+          <h1><a href="index.html" style="text-decoration: none; color: inherit;">Tech Git Blog</a></h1>
         </div>
         <div class="nav-search">
-          <div class="search-wrapper">
-            <input 
-              type="text" 
-              id="searchInput" 
-              class="search-input" 
-              placeholder="Search articles..."
-              aria-label="Search articles"
-            >
-            <button class="search-btn" aria-label="Search">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="11" cy="11" r="8"></circle>
-                <path d="m21 21-4.35-4.35"></path>
-              </svg>
-            </button>
-          </div>
+          <!-- Search component will be initialized here -->
         </div>
         <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
           <span class="toggle-icon">🌙</span>
         </button>
         <ul class="nav-links">
-          <li><a href="/" class="nav-link">Home</a></li>
+          <li><a href="index.html" class="nav-link">Home</a></li>
           <li><a href="about.html" class="nav-link active">About</a></li>
           <li><a href="tags.html" class="nav-link">Tags</a></li>
         </ul>
@@ -47,74 +33,91 @@
     <div class="container">
       <div class="content-wrapper">
         <h1 class="page-title">About Tech Git Blog</h1>
-        <p class="page-description">
-          A modern platform for developers exploring the cutting edge of technology
-        </p>
+        <p class="page-description">Your source for cutting-edge web development insights</p>
 
         <div class="about-content">
           <section class="about-section">
-            <h2>Our Mission</h2>
+            <h2>Welcome to Tech Git Blog</h2>
             <p>
-              Tech Git Blog is dedicated to bringing you the latest insights, tutorials, and deep dives into emerging technologies. 
-              We believe in the power of knowledge sharing and open collaboration within the developer community.
+              Tech Git Blog is a comprehensive resource for web developers, designers, and technology enthusiasts. 
+              We cover the latest trends, best practices, and emerging technologies in the world of web development.
             </p>
             <p>
-              Our platform focuses on practical, hands-on content that helps developers stay ahead of the curve in an 
-              ever-evolving technological landscape.
+              Our mission is to provide high-quality, practical content that helps developers stay current with 
+              the rapidly evolving landscape of web technologies. From JavaScript frameworks to CSS innovations, 
+              from performance optimization to modern development workflows – we've got you covered.
             </p>
           </section>
 
           <section class="about-section">
-            <h2>What We Cover</h2>
+            <h2>What You'll Find Here</h2>
+            <ul class="feature-list">
+              <li>In-depth tutorials on modern JavaScript features and frameworks</li>
+              <li>CSS tips and tricks for responsive, performant designs</li>
+              <li>Vanilla JS solutions and modern web components</li>
+              <li>Performance optimization strategies</li>
+              <li>Progressive Web App development</li>
+              <li>Emerging technologies like WebAssembly and Web Components</li>
+              <li>Code examples and practical implementations</li>
+              <li>Industry insights and trend analysis</li>
+            </ul>
+          </section>
+
+          <section class="about-section">
+            <h2>Topics We Cover</h2>
             <div class="topics-grid">
               <div class="topic-card">
-                <h3>Artificial Intelligence</h3>
-                <p>Machine learning, neural networks, and AI frameworks that are shaping the future of software development.</p>
+                <h3>Modern JavaScript</h3>
+                <p>ES2024 features, vanilla JS patterns, web components, and modern JavaScript development.</p>
               </div>
               <div class="topic-card">
-                <h3>Blockchain & Web3</h3>
-                <p>Decentralized technologies, smart contracts, and the evolving landscape of Web3 development.</p>
+                <h3>CSS & Design</h3>
+                <p>Modern CSS features, responsive design, animations, and cutting-edge styling techniques.</p>
               </div>
               <div class="topic-card">
-                <h3>Quantum Computing</h3>
-                <p>Quantum algorithms, cryptography, and the intersection of quantum computing with traditional software.</p>
+                <h3>Web Performance</h3>
+                <p>Optimization strategies, monitoring, profiling, and creating lightning-fast web experiences.</p>
               </div>
               <div class="topic-card">
-                <h3>Edge Computing</h3>
-                <p>IoT development, cloud-native architectures, and distributed computing at the edge.</p>
+                <h3>Progressive Web Apps</h3>
+                <p>Service workers, offline functionality, and creating app-like web experiences.</p>
               </div>
               <div class="topic-card">
-                <h3>5G & Mobile Tech</h3>
-                <p>Next-generation mobile technologies, AR/VR development, and real-time applications.</p>
+                <h3>Web Components</h3>
+                <p>Custom elements, shadow DOM, and building reusable component libraries.</p>
               </div>
               <div class="topic-card">
-                <h3>Automation & Robotics</h3>
-                <p>Smart city technologies, automation frameworks, and the future of human-computer interaction.</p>
+                <h3>Best Practices</h3>
+                <p>Code quality, security, accessibility, and maintainable development patterns.</p>
               </div>
             </div>
           </section>
 
           <section class="about-section">
-            <h2>Why Choose Tech Git Blog?</h2>
+            <h2>Technology Stack</h2>
+            <p>
+              This blog is built with modern web technologies and best practices:
+            </p>
             <ul class="feature-list">
-              <li>In-depth technical articles written by industry experts</li>
-              <li>Practical tutorials with real-world examples</li>
-              <li>Regular coverage of emerging technologies and trends</li>
-              <li>Clean, distraction-free reading experience</li>
-              <li>Mobile-optimized design for learning on the go</li>
-              <li>Search and filtering capabilities to find relevant content</li>
+              <li>Vanilla JavaScript with modern component patterns</li>
+              <li>Static site generation for optimal performance</li>
+              <li>Service Worker for offline functionality</li>
+              <li>Progressive Web App features</li>
+              <li>Responsive design with modern CSS</li>
+              <li>Semantic HTML and accessibility features</li>
             </ul>
           </section>
 
           <section class="about-section">
-            <h2>Join Our Community</h2>
+            <h2>Stay Connected</h2>
             <p>
-              Whether you're a seasoned developer or just starting your journey into emerging technologies, 
-              Tech Git Blog provides valuable insights and practical knowledge to help you grow.
+              Tech Git Blog is constantly evolving with new content, insights, and community contributions. 
+              Whether you're a beginner looking to learn the fundamentals or an experienced developer 
+              seeking the latest innovations, you'll find valuable content here.
             </p>
             <p>
-              Explore our articles, discover new technologies, and join a community of developers who are 
-              passionate about building the future.
+              Use our search functionality to find specific topics, browse by tags to explore related content, 
+              or simply scroll through our latest posts to discover something new.
             </p>
           </section>
         </div>
@@ -128,6 +131,7 @@
     </div>
   </footer>
 
+  <script src="components.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

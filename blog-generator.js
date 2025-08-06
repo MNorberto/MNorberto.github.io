@@ -29,24 +29,10 @@ class BlogGenerator {
     <div class="container">
       <nav class="nav">
         <div class="nav-brand">
-          <h1><a href="/" style="text-decoration: none; color: inherit;">Tech Git Blog</a></h1>
+          <h1><a href="../index.html" style="text-decoration: none; color: inherit;">Tech Git Blog</a></h1>
         </div>
         <div class="nav-search">
-          <div class="search-wrapper">
-            <input 
-              type="text" 
-              id="searchInput" 
-              class="search-input" 
-              placeholder="Search articles..."
-              aria-label="Search articles"
-            >
-            <button class="search-btn" aria-label="Search">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="11" cy="11" r="8"></circle>
-                <path d="m21 21-4.35-4.35"></path>
-              </svg>
-            </button>
-          </div>
+          <!-- Search component will be initialized here -->
         </div>
         <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
           <span class="toggle-icon">🌙</span>
@@ -103,6 +89,7 @@ class BlogGenerator {
     </div>
   </footer>
 
+  <script src="../components.js"></script>
   <script src="../script.js"></script>
 </body>
 </html>`;
@@ -158,24 +145,10 @@ class BlogGenerator {
     <div class="container">
       <nav class="nav">
         <div class="nav-brand">
-          <h1>Tech Git Blog</h1>
+          <h1><a href="index.html" style="text-decoration: none; color: inherit;">Tech Git Blog</a></h1>
         </div>
         <div class="nav-search">
-          <div class="search-wrapper">
-            <input 
-              type="text" 
-              id="searchInput" 
-              class="search-input" 
-              placeholder="Search articles..."
-              aria-label="Search articles"
-            >
-            <button class="search-btn" aria-label="Search">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="11" cy="11" r="8"></circle>
-                <path d="m21 21-4.35-4.35"></path>
-              </svg>
-            </button>
-          </div>
+          <!-- Search component will be initialized here -->
         </div>
         <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
           <span class="toggle-icon">🌙</span>
@@ -194,19 +167,7 @@ class BlogGenerator {
       <section class="posts-section">
         <h1 class="section-title">Latest Posts</h1>
         <div class="posts-grid" id="postsGrid">
-          ${this.posts.map(post => `
-          <a href="posts/${post.slug}.html" class="post-card">
-            <div class="post-header">
-              <h2 class="post-title">
-                <span>${post.title}</span>
-              </h2>
-              <time class="post-date">${this.formatDate(post.date)}</time>
-            </div>
-            <p class="post-excerpt">${post.excerpt}</p>
-            <div class="post-tags">
-              ${post.tags.map(tag => `<a href="tags.html?tag=${tag.toLowerCase()}" class="tag" onclick="event.stopPropagation()">${tag}</a>`).join('\n              ')}
-            </div>
-          </a>`).join('\n        ')}
+          <!-- Posts will be rendered by component -->
         </div>
       </section>
     </div>
@@ -222,6 +183,7 @@ class BlogGenerator {
     // Load posts data for search functionality
     window.postsData = ${JSON.stringify(this.posts, null, 2)};
   </script>
+  <script src="components.js"></script>
   <script src="script.js"></script>
 </body>
 </html>`;
@@ -252,24 +214,10 @@ class BlogGenerator {
     <div class="container">
       <nav class="nav">
         <div class="nav-brand">
-          <h1><a href="/" style="text-decoration: none; color: inherit;">Tech Git Blog</a></h1>
+          <h1><a href="index.html" style="text-decoration: none; color: inherit;">Tech Git Blog</a></h1>
         </div>
         <div class="nav-search">
-          <div class="search-wrapper">
-            <input 
-              type="text" 
-              id="searchInput" 
-              class="search-input" 
-              placeholder="Search articles..."
-              aria-label="Search articles"
-            >
-            <button class="search-btn" aria-label="Search">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="11" cy="11" r="8"></circle>
-                <path d="m21 21-4.35-4.35"></path>
-              </svg>
-            </button>
-          </div>
+          <!-- Search component will be initialized here -->
         </div>
         <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
           <span class="toggle-icon">🌙</span>
@@ -292,27 +240,14 @@ class BlogGenerator {
         <section class="tags-section">
           <h2>All Tags</h2>
           <div class="tags-cloud">
-            <button class="tag-filter active" data-tag="all">All Posts</button>
-            ${allTags.map(tag => `<button class="tag-filter" data-tag="${tag.toLowerCase()}">${tag}</button>`).join('\n            ')}
+            <!-- Tags filter component will be initialized here -->
           </div>
         </section>
 
         <section class="filtered-posts">
           <h2 id="postsTitle">All Posts</h2>
           <div class="posts-grid" id="filteredPostsGrid">
-            ${this.posts.map(post => `
-            <a href="posts/${post.slug}.html" class="post-card" data-tags="${post.tags.map(tag => tag.toLowerCase()).join(',')}">
-              <div class="post-header">
-                <h2 class="post-title">
-                  <span>${post.title}</span>
-                </h2>
-                <time class="post-date">${this.formatDate(post.date)}</time>
-              </div>
-              <p class="post-excerpt">${post.excerpt}</p>
-              <div class="post-tags">
-                ${post.tags.map(tag => `<a href="tags.html?tag=${tag.toLowerCase()}" class="tag" onclick="event.stopPropagation()">${tag}</a>`).join('\n                ')}
-              </div>
-            </a>`).join('\n          ')}
+            <!-- Posts will be rendered by component -->
           </div>
         </section>
       </div>
@@ -329,6 +264,7 @@ class BlogGenerator {
     // Load posts data for filtering
     window.postsData = ${JSON.stringify(this.posts, null, 2)};
   </script>
+  <script src="components.js"></script>
   <script src="script.js"></script>
 </body>
 </html>`;
