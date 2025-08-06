@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WebAssembly and Rust: Supercharging Web Performance - Tech Git Blog</title>
+  <meta name="description" content="Learn how to integrate Rust-compiled WebAssembly modules into your web applications for near-native performance">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <nav class="nav">
+        <div class="nav-brand">
+          <h1><a href="../" style="text-decoration: none; color: inherit;">Tech Git Blog</a></h1>
+        </div>
+        <div class="nav-search">
+          <div class="search-wrapper">
+            <input 
+              type="text" 
+              id="searchInput" 
+              class="search-input" 
+              placeholder="Search articles..."
+              aria-label="Search articles"
+            >
+            <button class="search-btn" aria-label="Search">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.35-4.35"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <ul class="nav-links">
+          <li><a href="../" class="nav-link">Home</a></li>
+          <li><a href="../about.html" class="nav-link">About</a></li>
+          <li><a href="../tags.html" class="nav-link">Tags</a></li>
+        </ul>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <span class="toggle-icon">🌙</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="container">
+      <article class="content-wrapper">
+        <header class="article-header">
+          <h1 class="page-title">WebAssembly and Rust: Supercharging Web Performance</h1>
+          <div class="article-meta">
+            <time class="post-date">November 15, 2024</time>
+            <div class="post-tags">
+              <a href="../tags.html?tag=automation" class="tag">Automation</a>
+              <a href="../tags.html?tag=robotics" class="tag">Robotics</a>
+              <a href="../tags.html?tag=smart-cities" class="tag">Smart Cities</a>
+            </div>
+          </div>
+        </header>
+
+        <div class="article-content">
+          <p class="lead">WebAssembly (WASM) combined with Rust offers unprecedented performance opportunities for web applications. This guide demonstrates how to leverage Rust's memory safety and performance characteristics through WebAssembly to build lightning-fast web experiences.</p>
+
+          <h2>Why WebAssembly + Rust?</h2>
+          <p>The combination of WebAssembly and Rust provides several compelling advantages:</p>
+          <ul>
+            <li><strong>Near-native performance:</strong> WASM runs at 95% of native speed</li>
+            <li><strong>Memory safety:</strong> Rust's ownership system prevents common memory bugs</li>
+            <li><strong>Small binary size:</strong> Rust compiles to efficient WASM modules</li>
+            <li><strong>Zero-cost abstractions:</strong> High-level code without runtime overhead</li>
+            <li><strong>Concurrent execution:</strong> Run alongside JavaScript without blocking</li>
+          </ul>
+
+          <h2>Setting Up the Development Environment</h2>
+          <p>First, let's set up the toolchain for Rust to WebAssembly development:</p>
+
+          <pre><code># Install Rust
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+# Add WebAssembly target
+rustup target add wasm32-unknown-unknown
+
+# Install wasm-pack (build tool)
+curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
+
+# Install cargo-generate (project templates)
+cargo install cargo-generate
+
+# Create new project from template
+cargo generate --git https://github.com/rustwasm/wasm-pack-template</code></pre>
+
+          <h2>Advanced Use Cases</h2>
+          <ul>
+            <li><strong>Cryptography:</strong> High-performance encryption/decryption</li>
+            <li><strong>Machine Learning:</strong> Neural network inference</li>
+            <li><strong>Game Engines:</strong> Physics calculations and rendering</li>
+            <li><strong>Audio Processing:</strong> Real-time audio effects and synthesis</li>
+            <li><strong>Data Processing:</strong> Large dataset analysis and transformation</li>
+            <li><strong>Computer Vision:</strong> Real-time image and video processing</li>
+          </ul>
+
+          <h2>Best Practices</h2>
+          <ul>
+            <li><strong>Minimize data transfer:</strong> Process data in WASM, avoid frequent JS/WASM boundary crossings</li>
+            <li><strong>Use appropriate data types:</strong> Prefer fixed-size arrays over dynamic vectors when possible</li>
+            <li><strong>Profile before optimizing:</strong> Use browser dev tools to identify actual bottlenecks</li>
+            <li><strong>Consider memory layout:</strong> Structure data for cache-friendly access patterns</li>
+            <li><strong>Implement error handling:</strong> Use Result types for robust error propagation</li>
+          </ul>
+
+          <h2>Conclusion</h2>
+          <p>WebAssembly and Rust provide a powerful combination for web performance optimization. By moving computationally intensive tasks to WebAssembly, you can achieve near-native performance while maintaining the safety guarantees that Rust provides.</p>
+          
+          <p>Start with small, isolated modules and gradually expand your use of WebAssembly as you become more comfortable with the toolchain and development workflow. The performance gains are significant and will only improve as the WebAssembly ecosystem continues to mature.</p>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 Tech Git Blog. Built with ❤️ for developers.</p>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

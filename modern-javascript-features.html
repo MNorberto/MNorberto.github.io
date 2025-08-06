@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern JavaScript Features You Should Know in 2024 - Tech Git Blog</title>
+  <meta name="description" content="Explore the latest JavaScript features including optional chaining, nullish coalescing, and top-level await.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <nav class="nav">
+        <div class="nav-brand">
+          <h1><a href="/" style="text-decoration: none; color: inherit;">Tech Git Blog</a></h1>
+        </div>
+        <div class="nav-search">
+          <div class="search-wrapper">
+            <input 
+              type="text" 
+              id="searchInput" 
+              class="search-input" 
+              placeholder="Search articles..."
+              aria-label="Search articles"
+            >
+            <button class="search-btn" aria-label="Search">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.35-4.35"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <span class="toggle-icon">🌙</span>
+        </button>
+        <ul class="nav-links">
+          <li><a href="../index.html" class="nav-link">Home</a></li>
+          <li><a href="../about.html" class="nav-link">About</a></li>
+          <li><a href="../tags.html" class="nav-link">Tags</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="container">
+      <article class="article">
+        <header class="article-header">
+          <h1 class="page-title">Modern JavaScript Features You Should Know in 2024</h1>
+          <div class="article-meta">
+            <span class="post-author">By Miguel</span>
+            <time class="post-date">December 15, 2024</time>
+            <div class="post-tags">
+              <a href="../tags.html?tag=ai" class="tag">AI</a>
+              <a href="../tags.html?tag=machine-learning" class="tag">Machine Learning</a>
+              <a href="../tags.html?tag=neural-networks" class="tag">Neural Networks</a>
+            </div>
+          </div>
+        </header>
+
+        <div class="article-content">
+          <h2>Optional Chaining (?.)</h2>
+          <p>
+            Optional chaining allows you to safely access deeply nested object properties without having to validate each reference in the chain explicitly.
+          </p>
+          <pre><code>// Before optional chaining
+if (user && user.address && user.address.street) {
+  console.log(user.address.street);
+}
+
+// With optional chaining
+console.log(user?.address?.street);</code></pre>
+
+          <h2>Nullish Coalescing (??)</h2>
+          <p>
+            The nullish coalescing operator provides a way to fall back to a default value when dealing with null or undefined, but not other falsy values like 0 or empty strings.
+          </p>
+          <pre><code>// Using || operator (problematic with falsy values)
+const config = {
+  timeout: 0,
+  retries: null
+};
+
+const timeout = config.timeout || 5000; // 5000 (wrong!)
+const retries = config.retries ?? 3; // 3 (correct!)</code></pre>
+
+          <h2>Top-Level Await</h2>
+          <p>
+            You can now use await at the top level of modules, making it easier to work with asynchronous code during module initialization.
+          </p>
+          <pre><code>// In a module file
+const data = await fetch('/api/config').then(r => r.json());
+const connection = await connectToDatabase();
+
+export { data, connection };</code></pre>
+
+          <h2>Array Methods: at(), findLast(), and findLastIndex()</h2>
+          <p>
+            New array methods provide more intuitive ways to access and find elements.
+          </p>
+          <pre><code>const arr = [1, 2, 3, 4, 5];
+
+// Negative indexing with at()
+console.log(arr.at(-1)); // 5
+console.log(arr.at(-2)); // 4
+
+// Finding from the end
+const users = [
+  { id: 1, active: false },
+  { id: 2, active: true },
+  { id: 3, active: true }
+];
+
+const lastActiveUser = users.findLast(user => user.active);
+console.log(lastActiveUser); // { id: 3, active: true }</code></pre>
+
+          <h2>Private Fields and Methods</h2>
+          <p>
+            True privacy in JavaScript classes using the # prefix for private fields and methods.
+          </p>
+          <pre><code>class BankAccount {
+  #balance = 0;
+  #accountNumber;
+
+  constructor(accountNumber) {
+    this.#accountNumber = accountNumber;
+  }
+
+  #validateAmount(amount) {
+    return amount > 0 && typeof amount === 'number';
+  }
+
+  deposit(amount) {
+    if (this.#validateAmount(amount)) {
+      this.#balance += amount;
+    }
+  }
+
+  getBalance() {
+    return this.#balance;
+  }
+}</code></pre>
+
+          <h2>Logical Assignment Operators</h2>
+          <p>
+            Combine logical operators with assignment for more concise code.
+          </p>
+          <pre><code>// Logical OR assignment (||=)
+user.name ||= 'Anonymous';
+
+// Logical AND assignment (&&=)
+user.isAdmin &&= user.permissions.includes('admin');
+
+// Logical nullish assignment (??=)
+config.timeout ??= 5000;</code></pre>
+
+          <h2>Conclusion</h2>
+          <p>
+            These modern JavaScript features significantly improve code readability, safety, and developer experience. As browser support continues to improve, incorporating these features into your development workflow will make your code more robust and maintainable.
+          </p>
+        </div>
+
+        <section class="related-posts">
+          <h2 class="related-posts-title">Related Posts</h2>
+          <div class="related-posts-grid">
+            <article class="related-post-card">
+              <h3 class="related-post-title">
+                <a href="react-performance-optimization.html">React Performance Optimization with Custom Hooks</a>
+              </h3>
+              <p class="related-post-excerpt">Learn how to build custom React hooks that optimize performance through memoization and debouncing.</p>
+              <div class="related-post-tags">
+                <span class="tag">React</span>
+                <span class="tag">Performance</span>
+              </div>
+            </article>
+
+            <article class="related-post-card">
+              <h3 class="related-post-title">
+                <a href="typescript-node-api.html">Building Type-Safe APIs with TypeScript and Node.js</a>
+              </h3>
+              <p class="related-post-excerpt">A comprehensive guide to building robust, type-safe REST APIs using TypeScript and Express.</p>
+              <div class="related-post-tags">
+                <span class="tag">TypeScript</span>
+                <span class="tag">Node.js</span>
+              </div>
+            </article>
+
+            <article class="related-post-card">
+              <h3 class="related-post-title">
+                <a href="webassembly-rust-performance.html">WebAssembly and Rust: Supercharging Web Performance</a>
+              </h3>
+              <p class="related-post-excerpt">Learn how to integrate Rust-compiled WebAssembly modules for near-native web performance.</p>
+              <div class="related-post-tags">
+                <span class="tag">WebAssembly</span>
+                <span class="tag">Rust</span>
+              </div>
+            </article>
+          </div>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 Tech Git Blog. Built with ❤️ for developers.</p>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

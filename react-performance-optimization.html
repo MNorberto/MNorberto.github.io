@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>React Performance Optimization with Custom Hooks - Tech Git Blog</title>
+  <meta name="description" content="Learn how to build custom React hooks that optimize performance through memoization and debouncing.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <nav class="nav">
+        <div class="nav-brand">
+          <h1><a href="/" style="text-decoration: none; color: inherit;">Tech Git Blog</a></h1>
+        </div>
+        <div class="nav-search">
+          <div class="search-wrapper">
+            <input 
+              type="text" 
+              id="searchInput" 
+              class="search-input" 
+              placeholder="Search articles..."
+              aria-label="Search articles"
+            >
+            <button class="search-btn" aria-label="Search">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.35-4.35"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <span class="toggle-icon">🌙</span>
+        </button>
+        <ul class="nav-links">
+          <li><a href="../index.html" class="nav-link">Home</a></li>
+          <li><a href="../about.html" class="nav-link">About</a></li>
+          <li><a href="../tags.html" class="nav-link">Tags</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="container">
+      <article class="article">
+        <header class="article-header">
+          <h1 class="page-title">React Performance Optimization with Custom Hooks</h1>
+          <div class="article-meta">
+            <span class="post-author">By Miguel</span>
+            <time class="post-date">December 10, 2024</time>
+            <div class="post-tags">
+              <a href="../tags.html?tag=blockchain" class="tag">Blockchain</a>
+              <a href="../tags.html?tag=web3" class="tag">Web3</a>
+              <a href="../tags.html?tag=decentralized" class="tag">Decentralized</a>
+            </div>
+          </div>
+        </header>
+
+        <div class="article-content">
+          <h2>React Performance Bottlenecks</h2>
+          <p>
+            Before diving into solutions, it's important to understand what causes performance issues in React applications. Common culprits include unnecessary re-renders, expensive computations, and inefficient state management.
+          </p>
+
+          <h2>Creating a Debounced Hook</h2>
+          <p>
+            Debouncing is essential for handling rapid user inputs like search queries or form validation.
+          </p>
+          <pre><code>import { useState, useEffect } from 'react';
+
+function useDebounce(value, delay) {
+  const [debouncedValue, setDebouncedValue] = useState(value);
+
+  useEffect(() => {
+    const handler = setTimeout(() => {
+      setDebouncedValue(value);
+    }, delay);
+
+    return () => {
+      clearTimeout(handler);
+    };
+  }, [value, delay]);
+
+  return debouncedValue;
+}
+
+// Usage
+function SearchComponent() {
+  const [searchTerm, setSearchTerm] = useState('');
+  const debouncedSearchTerm = useDebounce(searchTerm, 300);
+
+  useEffect(() => {
+    if (debouncedSearchTerm) {
+      // Perform search API call
+      searchAPI(debouncedSearchTerm);
+    }
+  }, [debouncedSearchTerm]);
+
+  return (
+    <input
+      value={searchTerm}
+      onChange={(e) => setSearchTerm(e.target.value)}
+      placeholder="Search..."
+    />
+  );
+}</code></pre>
+
+          <h2>Memoization Hook for Expensive Calculations</h2>
+          <p>
+            For computationally expensive operations, we can create a custom hook that combines useMemo with additional logic.
+          </p>
+          <pre><code>import { useMemo, useRef } from 'react';
+
+function useExpensiveCalculation(calculate, dependencies) {
+  const previousDeps = useRef();
+  const previousResult = useRef();
+
+  const result = useMemo(() => {
+    const hasChanged = !previousDeps.current || 
+      dependencies.some((dep, index) => dep !== previousDeps.current[index]);
+
+    if (hasChanged) {
+      console.log('Performing expensive calculation...');
+      previousResult.current = calculate();
+      previousDeps.current = dependencies;
+    }
+
+    return previousResult.current;
+  }, dependencies);
+
+  return result;
+}
+
+// Usage
+function DataProcessor({ data, filters }) {
+  const processedData = useExpensiveCalculation(
+    () => data.filter(item => filters.every(filter => filter(item))),
+    [data, filters]
+  );
+
+  return <DataTable data={processedData} />;
+}</code></pre>
+
+          <h2>Virtual Scrolling Hook</h2>
+          <p>
+            For large lists, virtual scrolling can dramatically improve performance by only rendering visible items.
+          </p>
+          <pre><code>import { useState, useEffect, useMemo } from 'react';
+
+function useVirtualScroll({
+  items,
+  itemHeight,
+  containerHeight,
+  overscan = 5
+}) {
+  const [scrollTop, setScrollTop] = useState(0);
+
+  const visibleItems = useMemo(() => {
+    const startIndex = Math.max(0, Math.floor(scrollTop / itemHeight) - overscan);
+    const endIndex = Math.min(
+      items.length - 1,
+      Math.floor((scrollTop + containerHeight) / itemHeight) + overscan
+    );
+
+    return items.slice(startIndex, endIndex + 1).map((item, index) => ({
+      ...item,
+      index: startIndex + index
+    }));
+  }, [items, itemHeight, containerHeight, scrollTop, overscan]);
+
+  const totalHeight = items.length * itemHeight;
+
+  return {
+    visibleItems,
+    totalHeight,
+    scrollTop,
+    setScrollTop
+  };
+}</code></pre>
+
+          <h2>Conclusion</h2>
+          <p>
+            Custom hooks for performance optimization provide reusable solutions that can significantly improve your React application's responsiveness. By implementing debouncing, memoization, and virtual scrolling through custom hooks, you create maintainable and efficient code that scales well across your application.
+          </p>
+        </div>
+
+        <section class="related-posts">
+          <h2 class="related-posts-title">Related Posts</h2>
+          <div class="related-posts-grid">
+            <article class="related-post-card">
+              <h3 class="related-post-title">
+                <a href="modern-javascript-features.html">Modern JavaScript Features You Should Know in 2024</a>
+              </h3>
+              <p class="related-post-excerpt">Explore the latest JavaScript features including optional chaining, nullish coalescing, and top-level await.</p>
+              <div class="related-post-tags">
+                <span class="tag">JavaScript</span>
+                <span class="tag">ES2024</span>
+              </div>
+            </article>
+
+            <article class="related-post-card">
+              <h3 class="related-post-title">
+                <a href="css-container-queries.html">CSS Container Queries: The Future of Responsive Design</a>
+              </h3>
+              <p class="related-post-excerpt">Discover how CSS Container Queries enable components to respond to their container size rather than viewport.</p>
+              <div class="related-post-tags">
+                <span class="tag">CSS</span>
+                <span class="tag">Responsive</span>
+              </div>
+            </article>
+
+            <article class="related-post-card">
+              <h3 class="related-post-title">
+                <a href="typescript-node-api.html">Building Type-Safe APIs with TypeScript and Node.js</a>
+              </h3>
+              <p class="related-post-excerpt">A comprehensive guide to building robust, type-safe REST APIs using TypeScript and Express.</p>
+              <div class="related-post-tags">
+                <span class="tag">TypeScript</span>
+                <span class="tag">Node.js</span>
+              </div>
+            </article>
+          </div>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 Tech Git Blog. Built with ❤️ for developers.</p>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
